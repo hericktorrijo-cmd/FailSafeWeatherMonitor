@@ -1,14 +1,21 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 
 public class WeatherDbContext: DbContext
 {
-	public DbSet<WeatherDataPoint> WeatherDataPoints { get; set; } = null!;
+    public DbSet<WeatherDataPoint> WeatherDataPoints { get; set; } = null!;
 
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		optionsBuilder.UseSqlServer(
-			"Server = (localdb)\\MSSQLLocalDB; Database = WeatherMonitorDb; Trusted_Connection = True;");
+		var configuration = new ConfigurationBuilder()								//Skapar en variabiler som ska konfigurera med jsonfilen
+			.SetBasePath(AppContext.BaseDirectory)
+			.AddJsonFile("appsettings.json")
+			.Build();
+
+        var connectionString = configuration["ConnectionStrings:DefaultConnection"];	//Skapar en variabel som innehåller värdet av jsonfilens Connectionsträng
+        optionsBuilder.UseSqlServer(connectionString);								// konfigurerar med variablen skapad ovanför
     }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)

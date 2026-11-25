@@ -1,5 +1,6 @@
 ﻿using Test.Services;
 
-var weatherImportService = new WeatherImportService();
 
-weatherImportService.Import();
+var menuService = new MenuService();
+
+menuService.ShowMenu();
