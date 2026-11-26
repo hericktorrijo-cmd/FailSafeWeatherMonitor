@@ -5,6 +5,10 @@
 
 //menuService.ShowMenu();
 
-var weatherApiService = new WeatherApiService();
+//var weatherApiService = new WeatherApiService();
 
-weatherApiService.GetWeather();
+//weatherApiService.GetWeather();
+
+var menu = new MenuService();
+
+menu.ShowMenu();

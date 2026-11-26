@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Spectre.Console;
+
 
 namespace Test.Services
 {
@@ -10,32 +12,36 @@ namespace Test.Services
         {
             while(true)
             {
-                
 
-                Console.WriteLine("1: Importera CSV");
-                Console.WriteLine("2: Visa statistik");
-                Console.WriteLine("3: Avsluta");
 
-                var choice = Console.ReadLine();
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[purple bold]Välj ett alternativ[/]")
+                        .AddChoices(
+                        "Importera CSV",
+                        "Hämta API-data",
+                        "Visa statistik",
+                        "Avsluta"));
                 
                 switch (choice)
                 {
-                    case "1":
+                    case "Importera CSV":
                         var importService = new WeatherImportService();
                         importService.Import();
                         break;
 
-                    case "2":
+                    case "Hämta API-data":
+                        var weatherApiService = new WeatherApiService();
+                        weatherApiService.GetWeather();
+                        break;
+
+                    case "Visa statistik":
                         var statisticsService = new StatisticsService();
                         statisticsService.ShowStatistics();
                         break;
 
-                    case "3":
+                    case "Avsluta":
                         return;
-
-                    default:
-                        Console.WriteLine("Ogiltigt val");
-                        break;
                 }
 
                 Console.WriteLine();
