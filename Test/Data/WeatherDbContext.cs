@@ -9,7 +9,7 @@ public class WeatherDbContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		var configuration = new ConfigurationBuilder()								//Skapar en variabiler som ska konfigurera med jsonfilen
+		var configuration = new ConfigurationBuilder()								//Skapar en variabel som ska konfigurera med jsonfilen
 			.SetBasePath(AppContext.BaseDirectory)
 			.AddJsonFile("appsettings.json")
 			.Build();

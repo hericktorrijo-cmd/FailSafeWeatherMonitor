@@ -1,6 +1,10 @@
 ﻿using Test.Services;
 
 
-var menuService = new MenuService();
+//var menuService = new MenuService();
 
-menuService.ShowMenu();
+//menuService.ShowMenu();
+
+var weatherApiService = new WeatherApiService();
+
+weatherApiService.GetWeather();
