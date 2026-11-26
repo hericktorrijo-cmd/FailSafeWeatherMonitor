@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Test.Migrations;
+namespace FailSafeWeatherMonitor.Migrations;
 
 [DbContext(typeof(WeatherDbContext))]
 [Migration("20261124110609_InitialCreate")]

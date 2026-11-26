@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
-using Test.Models;
+using FailSafeWeatherMonitor.Models;
 
-namespace Test.Services
+namespace FailSafeWeatherMonitor.Services
 {
     public class WeatherApiService
     {

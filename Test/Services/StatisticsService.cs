@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test.Services
+namespace FailSafeWeatherMonitor.Services
 {
     public class StatisticsService
     {

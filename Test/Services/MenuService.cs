@@ -4,7 +4,7 @@ using System.Text;
 using Spectre.Console;
 
 
-namespace Test.Services
+namespace FailSafeWeatherMonitor.Services
 {
     public class MenuService
     {

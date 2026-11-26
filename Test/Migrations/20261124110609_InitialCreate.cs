@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Test.Migrations;
+namespace FailSafeWeatherMonitor.Migrations;
 
 /// <inheritdoc />
 public partial class _20261124110609_InitialCreate : Migration

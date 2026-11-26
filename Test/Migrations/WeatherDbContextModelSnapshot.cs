@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Test.Migrations;
+namespace FailSafeWeatherMonitor.Migrations;
 
 [DbContext(typeof(WeatherDbContext))]
 partial class WeatherDbContextModelSnapshot : ModelSnapshot

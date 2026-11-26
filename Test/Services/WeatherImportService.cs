@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Test.Services
+namespace FailSafeWeatherMonitor.Services
 {
     public class WeatherImportService
     {

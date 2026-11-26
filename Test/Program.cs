@@ -1,4 +1,4 @@
-﻿using Test.Services;
+﻿using FailSafeWeatherMonitor.Services;
 
 var menu = new MenuService();
 
